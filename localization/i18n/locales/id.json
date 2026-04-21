@@ -1,6 +1,5 @@
 {
-  "greeting": "Halo!",
+  "greeting": "Hai!",
   "welcome": "Selamat datang di aplikasi",
-  "language": "Bahasa",
   "changeLanguage": "Ganti Bahasa"
 }

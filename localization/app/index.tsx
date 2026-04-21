@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Index() {
+export default function ExampleFinal() {
   const { t, i18n } = useTranslation();
 
   const languages = [
@@ -12,10 +12,12 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 25 }}>{t("greeting")}</Text>
+      <Text style={{ fontSize: 45 }}>{t("greeting")}</Text>
+
       <Text>{t("welcome")}</Text>
 
       <Text style={{ marginTop: 20 }}>{t("changeLanguage")}:</Text>
+
       {languages.map((lang) => (
         <TouchableOpacity
           key={lang.code}
@@ -25,6 +27,32 @@ export default function Index() {
           <Text style={{ color: "white" }}>{lang.label}</Text>
         </TouchableOpacity>
       ))}
+    </View>
+  );
+}
+
+function ExampleTwo() {
+  const { t } = useTranslation();
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 45 }}>{t("greeting")}</Text>
+
+      <Text>{t("welcome")}</Text>
+
+      <Text style={{ marginTop: 20 }}>{t("changeLanguage")}:</Text>
+    </View>
+  );
+}
+
+function ExampleOne() {
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 45 }}>Halo!</Text>
+
+      <Text>Selamat datang!</Text>
+
+      <Text style={{ marginTop: 20 }}>Ganti bahasa:</Text>
     </View>
   );
 }
